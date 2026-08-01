@@ -1,19 +1,25 @@
-name: Run Python Script
+name: Run Python Automation
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
-  run:
+  run-script:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Download project
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Install Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - run: pip install -r requirements.txt
+      - name: Install packages
+        run: |
+          pip install -r requirements.txt
 
-      - run: python force_brute.py
+      - name: Start script
+        run: python force_brute.py
