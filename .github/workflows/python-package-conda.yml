@@ -3,6 +3,7 @@ name: Run Python Automation
 on:
   workflow_dispatch:
   push:
+    branches: [ "main" ]
 
 jobs:
   run-script:
