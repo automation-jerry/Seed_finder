@@ -1,0 +1,8 @@
+{
+  "seeds_to_check": 100,
+  "chains": ["BTC", "ETH", "BSC", "LTC", "DOGE"],
+  "save_all_results": false,
+  "stop_on_fund": true,
+  "delay_between_checks": 0.2,
+  "concurrent_checks": 10
+}
